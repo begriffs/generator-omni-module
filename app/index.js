@@ -3,8 +3,7 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 
-
-var Omni-moduleGenerator = module.exports = function Omni-moduleGenerator(args, options, config) {
+var OmniModuleGenerator = module.exports = function OmniModuleGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
   this.on('end', function () {
@@ -14,29 +13,39 @@ var Omni-moduleGenerator = module.exports = function Omni-moduleGenerator(args, 
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
 
-util.inherits(Omni-moduleGenerator, yeoman.generators.Base);
+util.inherits(OmniModuleGenerator, yeoman.generators.Base);
 
-Omni-moduleGenerator.prototype.askFor = function askFor() {
+OmniModuleGenerator.prototype.askFor = function askFor() {
   var cb = this.async();
 
   // have Yeoman greet the user.
   console.log(this.yeoman);
 
-  var prompts = [{
-    type: 'confirm',
-    name: 'someOption',
-    message: 'Would you like to enable this option?',
-    default: true
-  }];
+  var prompts = [
+    {
+      name: 'moduleName',
+      message: 'What are you naming this module?'
+    },
+    {
+      name: 'author',
+      message: 'What is your name?',
+    },
+    {
+      name: 'githubUser',
+      message: 'What is your Github username?'
+    },
+  ];
 
   this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
+    this.moduleName = props.moduleName;
+    this.author = props.author;
+    this.githubUser = props.githubUser;
 
     cb();
   }.bind(this));
 };
 
-Omni-moduleGenerator.prototype.app = function app() {
+OmniModuleGenerator.prototype.app = function app() {
   this.mkdir('app');
   this.mkdir('app/templates');
 
@@ -44,7 +53,7 @@ Omni-moduleGenerator.prototype.app = function app() {
   this.copy('_bower.json', 'bower.json');
 };
 
-Omni-moduleGenerator.prototype.projectfiles = function projectfiles() {
+OmniModuleGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
 };
