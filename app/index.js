@@ -46,14 +46,14 @@ OmniModuleGenerator.prototype.askFor = function askFor() {
 };
 
 OmniModuleGenerator.prototype.app = function app() {
-  this.mkdir('app');
-  this.mkdir('app/templates');
-
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
+  this.template('_package.json', 'package.json');
+  this.template('_bower.json', 'bower.json');
+  this.template('_LICENSE', 'LICENSE');
 };
 
 OmniModuleGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
+  this.copy('gitignore', '.gitignore');
+  this.copy('travis.yml', 'travis.yml');
 };
