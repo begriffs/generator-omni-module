@@ -1,6 +1,5 @@
 {
   "node": true,
-  "es5": true,
   "esnext": true,
   "bitwise": true,
   "camelcase": true,
@@ -11,12 +10,13 @@
   "latedef": true,
   "newcap": true,
   "noarg": true,
-  "quotmark": "single",
+  "quotmark": true,
   "regexp": true,
   "undef": true,
   "unused": true,
   "strict": true,
   "trailing": true,
   "smarttabs": true,
-  "white": true
+  "white": true,
+  "globals": { "require": false, "module": false, "describe": false, "it": false, "beforeEach": false, "context": false }
 }
