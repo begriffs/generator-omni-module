@@ -49,6 +49,7 @@ OmniModuleGenerator.prototype.app = function app() {
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
   this.template('_LICENSE', 'LICENSE');
+  this.copy('main.js', 'main.js');
 };
 
 OmniModuleGenerator.prototype.projectfiles = function projectfiles() {

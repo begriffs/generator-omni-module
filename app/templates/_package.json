@@ -2,7 +2,7 @@
   "name": "<%= moduleName %>",
   "version": "0.0.0",
   "description": "",
-  "main": "<%= moduleName %>.js",
+  "main": "main.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/<%= githubUser %>/<%= moduleName %>.git"
