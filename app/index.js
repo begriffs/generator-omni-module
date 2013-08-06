@@ -49,7 +49,7 @@ OmniModuleGenerator.prototype.app = function app() {
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
   this.template('_LICENSE', 'LICENSE');
-  this.copy('_main.js', 'main.js');
+  this.copy('_module.js', 'module.js');
 };
 
 OmniModuleGenerator.prototype.projectfiles = function projectfiles() {
@@ -58,4 +58,9 @@ OmniModuleGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('gitignore', '.gitignore');
   this.copy('_Gruntfile.js', 'Gruntfile.js');
   this.copy('_travis.yml', 'travis.yml');
+};
+
+OmniModuleGenerator.prototype.tests = function tests() {
+  this.mkdir('test');
+  this.template('_existence.js', 'test/existence.js');
 };
