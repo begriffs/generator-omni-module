@@ -19,18 +19,18 @@ consistent no matter how many people modify it.
 
 ## Getting started
 
-* Create the boilerplate
+1. Create the boilerplate
 
-```
+    ```
     mkdir your-module && cd $_
     npm install -g yo
     npm install -g generator-omni-module
     yo omni-module
-```
+    ```
 
-* Answer the questions it asks you.
-* Add the Github upstream specified in `package.json`
-* Write your lovely code and a README.
+2. Answer the questions it asks you.
+3. Add the Github upstream specified in `package.json`
+4. Write your lovely code and a README.
 
 ## Testing your module
 
@@ -42,8 +42,8 @@ branches.
 
 ## Publishing your module
 
-* Register your module with Bower: `bower register <my-package-name> <git-endpoint>`
-* Bump the version, tag the code, and publish with: `grunt release`
+1. Register your module with Bower: `bower register <my-package-name> <git-endpoint>`
+2. Bump the version, tag the code, and publish with: `grunt release`
 
 ## License
 
