@@ -1,9 +1,9 @@
 {
   "name": "generator-omni-module",
-  "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "version": "0.0.1",
+  "description": "Write clean modern JS modules that run everywhere",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator", "module", "npm", "bower", "amd", "commonjs"
   ],
   "homepage": "https://github.com/begriffs/generator-omni-module",
   "bugs": "https://github.com/begriffs/generator-omni-module/issues",

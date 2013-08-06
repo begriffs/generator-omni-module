@@ -7,4 +7,3 @@ describe('<%= _.classify(moduleName) %>', function() {
     expect(<%= _.classify(moduleName) %>).to.be.an('object');
   });
 });
-
