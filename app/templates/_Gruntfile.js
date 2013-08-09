@@ -30,5 +30,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-release');
 
   // By default, lint and run all tests.
-  grunt.task.registerTask('test', ['jshint', 'mochaTest']);
+  grunt.task.registerTask('default', ['jshint', 'mochaTest']);
+  grunt.task.registerTask('test', ['mochaTest']);
 };
