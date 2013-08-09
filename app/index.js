@@ -57,7 +57,7 @@ OmniModuleGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('jshintrc', '.jshintrc');
   this.copy('gitignore', '.gitignore');
   this.copy('_Gruntfile.js', 'Gruntfile.js');
-  this.copy('_travis.yml', 'travis.yml');
+  this.copy('_travis.yml', '.travis.yml');
 };
 
 OmniModuleGenerator.prototype.tests = function tests() {
