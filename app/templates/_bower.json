@@ -1,7 +1,7 @@
 {
   "name": "<%= moduleName %>",
   "version": "0.0.0",
-  "main": "main.js",
+  "main": "module.js",
   "dependencies": {
     "requirejs": "~2.1.8"
   },
