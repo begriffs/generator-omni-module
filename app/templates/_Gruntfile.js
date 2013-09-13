@@ -18,16 +18,16 @@ module.exports = function (grunt) {
         src: ['test/**/*.js']
       }
     },
-    release: {
+    bump: {
       options: {
-        file: ['package.json', 'bower.json']
+        files: ['package.json', 'bower.json']
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-mocha-test');
-  grunt.loadNpmTasks('grunt-release');
+  grunt.loadNpmTasks('grunt-bump');
 
   // By default, lint and run all tests.
   grunt.task.registerTask('default', ['jshint', 'mochaTest']);

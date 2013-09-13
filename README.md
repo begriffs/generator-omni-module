@@ -43,7 +43,13 @@ branches.
 ## Publishing your module
 
 1. Register your module with Bower: `bower register <my-package-name> <git-endpoint>`
-2. Bump the version, tag the code, and publish with: `grunt release`
+2. Bump the version, tag the code, and publish with
+
+```sh
+grunt bump
+npm publish
+```
+(see more [options](https://github.com/vojtajina/grunt-bump) for version bumping)
 
 ## License
 
