@@ -4,6 +4,9 @@ if (typeof define !== 'function') {
 }
 
 define(function () {
-  // TODO add your code here, e.g.
-  // foo: function() { }
+  'use strict';
+  return {
+    // a: a = function() { ... },
+    // b: b = function() { ... }
+  };
 });
